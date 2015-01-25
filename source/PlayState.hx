@@ -56,13 +56,13 @@ class PlayState extends FlxState
 		}
 
 		if(FlxG.keys.justPressed.UP){
-			board.movePiecesSignal.dispatch(FlxObject.UP);
-		} else if(FlxG.keys.justPressed.DOWN){
 			board.movePiecesSignal.dispatch(FlxObject.DOWN);
+		} else if(FlxG.keys.justPressed.DOWN){
+			board.movePiecesSignal.dispatch(FlxObject.UP);
 		} else if(FlxG.keys.justPressed.LEFT){
-			board.movePiecesSignal.dispatch(FlxObject.LEFT);
-		} else if(FlxG.keys.justPressed.RIGHT){
 			board.movePiecesSignal.dispatch(FlxObject.RIGHT);
+		} else if(FlxG.keys.justPressed.RIGHT){
+			board.movePiecesSignal.dispatch(FlxObject.LEFT);
 		}
 	}
 }
